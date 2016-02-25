@@ -2,6 +2,8 @@
 #define CANVASWINDOW_H
 
 #include <QMainWindow>
+#include <QDesktopWidget>
+#include <QPushButton>
 
 namespace Ui {
 class CanvasWindow;
