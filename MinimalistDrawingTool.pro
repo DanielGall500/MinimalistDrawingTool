@@ -13,8 +13,10 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        canvaswindow.cpp
+        canvaswindow.cpp \
+    sketchpencil.cpp
 
-HEADERS  += canvaswindow.h
+HEADERS  += canvaswindow.h \
+    sketchpencil.h
 
 FORMS    += canvaswindow.ui
