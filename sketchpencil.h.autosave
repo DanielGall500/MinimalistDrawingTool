@@ -9,7 +9,7 @@ class SketchPencil : public QBrush
 {
     Q_OBJECT
 public:
-    explicit SketchPencil(QObject *parent = 0, int size, int colour);
+    explicit SketchPencil(QObject *parent = 0, QPainter painter, int size, int colour);
     ~SketchPencil();
 
 private:
