@@ -4,6 +4,8 @@
 #include <QMainWindow>
 #include <QDesktopWidget>
 #include <QPushButton>
+#include <QPainter>
+#include "sketchpencil.h"
 
 namespace Ui {
 class CanvasWindow;
@@ -19,6 +21,9 @@ public:
 
 private:
     Ui::CanvasWindow *ui;
+    QPainter masterPainter;
+
+    SketchPencil sketchPencil;
 };
 
 #endif // CANVASWINDOW_H

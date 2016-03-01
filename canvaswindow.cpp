@@ -10,6 +10,9 @@ CanvasWindow::CanvasWindow(QWidget *parent) :
 
     QRect rec = QApplication::desktop()->screenGeometry();
     QWidget::setFixedSize(rec.width() / 2, rec.height() / 2);
+
+    masterPainter = new QPainter(this);
+    sketchPencil = new SketchPencil(this, masterPainter);
 }
 
 CanvasWindow::~CanvasWindow()

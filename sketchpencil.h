@@ -3,18 +3,20 @@
 
 #include <QObject>
 #include <QPainter>
+#include <QColor>
 
 class SketchPencil : public QBrush
 {
     Q_OBJECT
 public:
-    explicit SketchPencil(QObject *parent = 0);
+    explicit SketchPencil(QObject *parent = 0, QPainter painter, int size, int colour);
     ~SketchPencil();
 
 private:
     int pencilSize;
-    QBrush brush;
+    QColor pencilColour;
 
+    QBrush *brush;
 signals:
 
 public slots:
