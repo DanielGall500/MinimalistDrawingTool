@@ -1,6 +1,6 @@
 #include "sketchpencil.h"
 
-SketchPencil::SketchPencil(QObject *parent, QPainter painter, int size = 10, int colour = Qt::black) : QObject(parent)
+SketchPencil::SketchPencil(QObject *parent, int size, Qt::GlobalColor colour) : QObject(parent)
 {
     pencilSize = size;
     pencilColour = colour;

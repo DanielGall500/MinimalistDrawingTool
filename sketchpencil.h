@@ -5,11 +5,11 @@
 #include <QPainter>
 #include <QColor>
 
-class SketchPencil : public QBrush
+class SketchPencil : public QObject
 {
     Q_OBJECT
 public:
-    explicit SketchPencil(QObject *parent = 0, QPainter painter, int size, int colour);
+    explicit SketchPencil(QObject *parent = 0, int size = 10, Qt::GlobalColor colour = Qt::black);
     ~SketchPencil();
 
 private:

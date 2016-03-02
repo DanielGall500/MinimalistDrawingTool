@@ -1,9 +1,9 @@
 #include "canvaswindow.h"
 #include "ui_canvaswindow.h"
+#include "sketchpencil.h"
 
 CanvasWindow::CanvasWindow(QWidget *parent) :
-    QMainWindow(parent),
-    ui(new Ui::CanvasWindow)
+    QMainWindow(parent), ui(new Ui::CanvasWindow)
 {
     ui->setupUi(this);
     QWidget::setWindowFlags(Qt::CustomizeWindowHint | Qt::FramelessWindowHint);
@@ -11,8 +11,8 @@ CanvasWindow::CanvasWindow(QWidget *parent) :
     QRect rec = QApplication::desktop()->screenGeometry();
     QWidget::setFixedSize(rec.width() / 2, rec.height() / 2);
 
-    masterPainter = new QPainter(this);
-    sketchPencil = new SketchPencil(this, masterPainter);
+    QPainter masterPainter(this);
+    sketchPencil = new SketchPencil(this);
 }
 
 CanvasWindow::~CanvasWindow()

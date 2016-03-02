@@ -21,9 +21,8 @@ public:
 
 private:
     Ui::CanvasWindow *ui;
-    QPainter masterPainter;
 
-    SketchPencil sketchPencil;
+    SketchPencil *sketchPencil;
 };
 
 #endif // CANVASWINDOW_H
