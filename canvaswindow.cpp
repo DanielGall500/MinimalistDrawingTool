@@ -19,3 +19,22 @@ CanvasWindow::~CanvasWindow()
 {
     delete ui;
 }
+
+void CanvasWindow::lineInterpolation()
+{
+    QPainterPath path;
+
+    path.moveTo(lastPosition);
+    path.lineTo(currentPosition);
+
+    qreal length = path.length();
+    qreal pos = 0;
+
+    while(pos < length)
+    {
+        qreal percent = path.percentAtLength(pos);
+
+        pos += spacing;
+    }
+
+}

@@ -5,6 +5,8 @@
 #include <QDesktopWidget>
 #include <QPushButton>
 #include <QPainter>
+#include <QPainterPath>
+
 #include "sketchpencil.h"
 
 namespace Ui {
@@ -21,8 +23,11 @@ public:
 
 private:
     Ui::CanvasWindow *ui;
-
     SketchPencil *sketchPencil;
+
+    QPointF lastPosition, currentPosition;
+    qreal spacing;
+    void lineInterpolation(); //where the user has moved the mouse while holding down
 };
 
 #endif // CANVASWINDOW_H
